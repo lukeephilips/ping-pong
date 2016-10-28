@@ -3,14 +3,32 @@ $(document).ready(function() {
     event.preventDefault();
     var userInput = $("#userInput").val();
     var output = pingPong(userInput);
-    $("#output").text(output);
+
+    $("#output").each(function(i) { // puts each array item on its own li
+      for (var j=0; j<output.length; j++) {
+
+        if (output[j] === "ping") {
+            $("li").addClass("ping");
+        }
+        else if (output[j] === "pong") {
+          $("li").addClass("pong");
+
+
+        }
+        else if (output[j] === "ping-pong") {
+          $("li").addClass("ping-pong");
+        }
+        $(this).append('<li>' + output[j] + '</li>');
+
+      };
+    });
   });
 });
 
 
-var numbersArray = [];
-
 var pingPong = function(input){
+  var numbersArray = [];
+
   var n = parseInt(input);
 
   for (i = 1; i <= n; i++) {
@@ -25,7 +43,8 @@ var pingPong = function(input){
     }
     else {
       numbersArray.push(i);
+
     };
   };
-  return numbersArray.join(" ");
+  return numbersArray;
 };
