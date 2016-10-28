@@ -1,0 +1,20 @@
+
+.ping {
+  color: red;
+}
+.pong {
+  color: blue;
+}
+.ping-pong {
+  color: #CC9900;
+}
+
+.slideDiv {
+  display: none;
+}
+.container {
+  width: 50%;
+}
+ul {
+  text-align: center;
+}

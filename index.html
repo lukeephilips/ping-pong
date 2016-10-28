@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/jquery-ui.css" media="all" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.css" media="all" type="text/css">
     <link rel="stylesheet" href="css/styles.css" media="all" type="text/css">
     <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Fizz Buzz</title>
+    <title>Ping Pong</title>
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
+          <p>
+            Enter a number to play some ping pong:
+          </p>
+      </div>
       <form>
         <label for="input">Enter a number: </label>
-        <input type="number" class="form-control" id="userInput">
-
+        <input type="number" class="form-control" id="userInput" min="1">
         <button type="submit" class="btn btn-primary">Submit</button>
+        <span class="slideDiv">
+          <!-- <select class="slide">
+            <option value="ping">Remove pings</option>
+            <option value="pong">Remove pongs</option>
+            <option value="ping-pong">Remove both</option>
+            <option value="restart">Put them back</option>
+          </select> -->
+          <button type="button" class="slideButton btn btn-danger" value="ping">Remove pings</button>
+          <button type="button" class="slideButton btn btn-info" value="pong">Remove pongs</button>
+          <button type="button" class="slideButton btn btn-warning" value="ping-pong">Remove both</button>
+          <button type="button" class="slideButton btn btn-default" value="restart">Put them back</button>
+        </span>
       </form>
+
       <div>
         <ul id="output">
         </ul>
       </div>
-    </div>
+
   </body>
 </html>

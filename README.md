@@ -28,6 +28,14 @@ _Program specifications:_
 * Example input: 15
 * Example output: 1 2 ping 4 pong ping 7 8 ping pong 11 ping 13 14 ping-pong
 
+6 If user clicks Remove Pings, pings will slide right and .hide
+
+7 If user clicks Remove Pongs, pongs will slide left and .hide
+
+8 If user clicks remove all, both pings and pongs will slide left and .hide
+
+9 If user clicks Add them back, all pings and pongs will .show
+
 ## Setup/Installation Requirements
 
 * There are no special setup or installation requirements.
