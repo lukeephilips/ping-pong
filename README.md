@@ -8,33 +8,33 @@
 
 _Program specifications:_
 
-1 If user inputs a non number character, return error
+1 Do not allow user to input a non integer character
 * Example input: r
 * Example output: "please enter a number"
 
-2 If user inputs n< 5 return i through n
+2 If user inputs n< 5 return 1 through n
 * Example input: 4
 * Example output: 1 2 3 4
 
-3 If user inputs a multiple of 3, replace 5 with "ping"
+3 If user inputs n> 5, return 1 through n, if this contains a multiple of 3, replace i with "ping"
 * Example input: 3
 * Example output: 1 2 ping
 
-4 If user inputs a multiple of 5, replace 5 with "pong"
+4 If user inputs n> 5, return 1 through n, if this contains a multiple of 5, replace i with "pong"
 * Example input: 5
 * Example output: 1 2 ping 4 pong
 
-5 If user inputs a multiple of both 5 and 3, replace n with "ping-pong"
+5  If user inputs n> 15, return 1 through n, if this contains a multiple of 5 and 3, replace i with "ping-pong"
 * Example input: 15
 * Example output: 1 2 ping 4 pong ping 7 8 ping pong 11 ping 13 14 ping-pong
 
-6 If user clicks Remove Pings, pings will slide right and .hide
+6 If user clicks "Remove Pings", pings will slide right and .hide
 
-7 If user clicks Remove Pongs, pongs will slide left and .hide
+7 If user clicks "Remove Pongs", pongs will slide left and .hide
 
-8 If user clicks remove all, both pings and pongs will slide left and .hide
+8 If user clicks "remove all", both pings and pongs will slide left and .hide
 
-9 If user clicks Add them back, all pings and pongs will .show
+9 If user clicks "Add them back", all pings and pongs will .show
 
 ## Setup/Installation Requirements
 

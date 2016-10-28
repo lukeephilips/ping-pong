@@ -3,29 +3,45 @@ body {
   position: absolute;
   width: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 681px;
+}
+
+.container {
+  width: 50%;
+
+}
+
+.jumbotron , .well {
+    background-color: rgba(245, 245, 245, .5);
+}
+
+.jumbotron {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .ping {
-  color: red;
+  color: #db2525;
 }
 .pong {
-  color: blue;
+  color: #6bddff;
 }
 .ping-pong {
-  color: #CC9900;
+  color: #ffaf3f;
 }
 
-.slideDiv {
+.slideDiv, .numbersDiv {
   display: none;
 }
-.container {
-  width: 50%;
-  /*background-color: rgba(255,255,255,0.4);
-  border-radius: 3%*/
-}
+
 ul {
   text-align: center;
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.2em;
   color: black;
+}
+.numbersDiv{
+  max-height: 675px;
+  overflow: scroll;
 }

@@ -4,8 +4,8 @@ $(document).ready(function() {
     var userInput = $("#userInput").val();
     var output = pingPong(userInput);
 
-    $("#output").each(function() {
-
+    $("#output").each(function() {// calls backend function and adds element
+      $(this).empty();
       for (var i=output.length-1; i>=0;  i--) { //adds a class to each element as it's printed
         var pingType = "";
         if (output[i] === "ping") {
@@ -17,37 +17,28 @@ $(document).ready(function() {
         else if (output[i] === "ping-pong") {
           pingType = "ping-pong";
         }
+
         $(this).prepend("<div class=\""+pingType+"\">" + output[i] + '</div>');
-        $(".slideDiv").show();
+        $(".slideDiv, .numbersDiv").show();
         };
       });
     });
 
-  $(".slideButton").click(function () { // slide effect
-    var pingDirection = $(this).val();
-    var effect = 'slide';
-    var options = {};
-    var duration = 1000;
-
-    switch (pingDirection) { //determines class and slide direction of elements to remove
+  $(".slideButton").click(function () { // slide effect to remove elements
+    switch ($(this).val()) {
       case "ping":
-        options = { direction: "right"};
-        $(".ping").hide(effect, options, duration);
+        $(".ping").hide('slide', { direction: "right"}, 1000);
         break;
       case "pong":
-        options = { direction: "left"};
-        $(".pong").hide(effect, options, duration);
+        $(".pong").hide('slide', {direction: "left"}, 1000);
         break;
       case "ping-pong":
+        $(".ping:visible").hide('slide', {direction: "right"}, 1000);
+        $(".pong:visible, .ping-pong:visible").hide('slide', {direction: "left"}, 1000);
+        break;
+      case "restart":
         $(".ping-pong, .ping, .pong").show();
-        options = { direction: "right"};
-        $(".ping").hide(effect, options, duration);
-        options = { direction: "left"};
-        $(".pong, .ping-pong").hide(effect, options, duration);
-        
-        case "restart":
-          $(".ping-pong, .ping, .pong").show();
-          break;
+        break;
       default:
         break;
     };
@@ -55,12 +46,12 @@ $(document).ready(function() {
 });
 
 
-var pingPong = function(input){
+var pingPong = function(input){ //pushes either the number, ping, pong, or ping pong as appropriate.
   var numbersArray = [];
 
   var n = parseInt(input);
 
-  for (i = 1; i <= n; i++) { //pushes either the number, ping, pong, or ping pong as appropriate.
+  for ( var i = 1; i <= n; i++) {
     if (i % 15 === 0) {
       numbersArray.push("ping-pong");
     }

@@ -13,7 +13,7 @@
     <div class="container">
       <div class="jumbotron">
           <p>
-            Enter a number to play some ping pong:
+            Please enter a number to play some ping pong:
           </p>
       </div>
       <form class="well">
@@ -21,12 +21,6 @@
         <input type="number" class="form-control" id="userInput" min="1">
         <button type="submit" class="btn btn-primary">Submit</button>
         <span class="slideDiv">
-          <!-- <select class="slide">
-            <option value="ping">Remove pings</option>
-            <option value="pong">Remove pongs</option>
-            <option value="ping-pong">Remove both</option>
-            <option value="restart">Put them back</option>
-          </select> -->
           <button type="button" class="slideButton btn btn-danger" value="ping">Remove pings</button>
           <button type="button" class="slideButton btn btn-info" value="pong">Remove pongs</button>
           <button type="button" class="slideButton btn btn-warning" value="ping-pong">Remove both</button>
@@ -34,7 +28,7 @@
         </span>
       </form>
 
-      <div>
+      <div class="numbersDiv well">
         <ul id="output">
         </ul>
       </div>
