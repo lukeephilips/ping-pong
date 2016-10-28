@@ -39,9 +39,12 @@ $(document).ready(function() {
         $(".pong").hide(effect, options, duration);
         break;
       case "ping-pong":
-        options = { direction: "left"};
         $(".ping-pong, .ping, .pong").show();
-        $(".ping-pong, .ping, .pong").hide(effect, options, duration);
+        options = { direction: "right"};
+        $(".ping").hide(effect, options, duration);
+        options = { direction: "left"};
+        $(".pong, .ping-pong").hide(effect, options, duration);
+        
         case "restart":
           $(".ping-pong, .ping, .pong").show();
           break;
