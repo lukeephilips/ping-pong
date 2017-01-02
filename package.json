@@ -1,0 +1,30 @@
+{
+  "name": "ping-pong",
+  "version": "1.0.0",
+  "description": "#### _counts up to the users inputted number while replacing multiples of 3 with \"ping\" and multiples of 5 with \"pong\"_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukeephilips/ping-pong.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukeephilips/ping-pong/issues"
+  },
+  "homepage": "https://github.com/lukeephilips/ping-pong#readme",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.4",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
